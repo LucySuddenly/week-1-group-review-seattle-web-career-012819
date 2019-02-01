@@ -1,5 +1,4 @@
 ## QUESTION 1
-
 pokemon = [
   {
     "id": 1,
@@ -60,6 +59,8 @@ pokemon = [
 }
 ]
 
+binding.pry
+
 
 # How would you get the url for Bulbasaur's ability?
 # How would you return the first pokemon with base experience over 40?
@@ -67,3 +68,27 @@ pokemon = [
 # How would you return an array of all of the pokemon's names?
 # How would you determine whether or not the pokemon array contained any pokemon with a weight greater than 60?
 #  whatever method you use should return true if there are any such pokemon, false if not.
+
+
+
+
+
+def weight_over_60(pokemon_array)
+  array = pokemon_array.map do |pokemon|
+    pokemon[:weight] > 60
+  end
+  puts array
+  array.include?(true)
+end
+
+def over_60(array)
+  array.any? {|pokemon| pokemon[:weight] > 60}
+end
+
+
+
+
+
+
+hash = { "key" => "value" }
+hash = { "key": "value" }
